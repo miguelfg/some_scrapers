@@ -28,7 +28,7 @@ def request_ssweb_seap_minhap_es():
         req.add_header("Cookie", "portalEELL=uos1gss8sr9e3scgo16m9pt1o7; ssoEELL=25fma5i9cabtduqcvaam8bs2q7; _ga=GA1.3.1489095445.1392115052; BALANCEID=balancer.prophpmodmz01")
 
         body = r"consulta_alcalde%5B_csrf_token%5D=fc69f17c058187dc3b02a79c5a02d6bb&consulta_alcalde%5Bid_provincia%5D=2&consulta_alcalde%5Bid_entidad%5D=17978"
-        body = r"consulta_alcalde%5B_csrf_token%5D=fc69f17c058187dc3b02a79c5a02d6bb&consulta_alcalde%5Bid_provincia%5D=2&consulta_alcalde%5Bid_entidad%5D=49085"
+        body = r"consulta_alcalde%5B_csrf_token%5D=fc69f17c058187dc3b02a79c5a02d6bb&consulta_alcalde%5Bid_provincia%5D=49&consulta_alcalde%5Bid_entidad%5D=49085"
 
         response = urllib2.urlopen(req, body)
 
