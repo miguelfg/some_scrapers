@@ -36,13 +36,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="concejales.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="concejales.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concejales.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="118" selection-start="1602" selection-end="1614" vertical-scroll-proportion="0.39416847" vertical-offset="145" max-vertical-offset="1105">
+            <state line="30" column="118" selection-start="1602" selection-end="1614" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="1105">
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="939">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,6 +139,11 @@
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents and Settings\MiguelFG\PycharmProjects\scraping_medialab" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.concejales">
     <configuration default="false" name="forges" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -341,7 +355,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1088" extended-state="7" />
+    <frame x="-4" y="-4" width="1928" height="1088" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -408,10 +422,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concejales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="118" selection-start="1602" selection-end="1614" vertical-scroll-proportion="0.39416847" vertical-offset="145" max-vertical-offset="1105">
+        <state line="30" column="118" selection-start="1602" selection-end="1614" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="1105">
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="939">
+          <folding />
         </state>
       </provider>
     </entry>
