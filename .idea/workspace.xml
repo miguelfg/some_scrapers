@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e865c71d-4070-4f78-a00a-28f2fca28974" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concejales.py" afterPath="$PROJECT_DIR$/concejales.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forges.py" afterPath="$PROJECT_DIR$/forges.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scraping_medialab.iws" />
@@ -43,7 +42,7 @@
       <file leaf-file-name="concejales.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concejales.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.36828643" vertical-offset="0" max-vertical-offset="2682">
+            <state line="57" column="0" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.046035804" vertical-offset="1008" max-vertical-offset="2664">
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -373,7 +372,11 @@
       <created>1393667878407</created>
       <updated>1393667878407</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="using requests, fails second step">
+      <created>1393674870074</created>
+      <updated>1393674870074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -529,7 +532,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concejales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.36828643" vertical-offset="0" max-vertical-offset="2682">
+        <state line="57" column="0" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.046035804" vertical-offset="1008" max-vertical-offset="2664">
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
