@@ -6,13 +6,13 @@ import scraperwiki
 from bs4 import BeautifulSoup
 
 
-def save2database(province, ine_code, concejales):
+def save2database(concejales):
     id = 1
     for concejal in concejales[:6]:
         if concejal[2] == 'Alcalde':
             scraperwiki.sqlite.save(unique_keys=["id"], data={"id":id,
-                                                              "prov":province,
-                                                              "ine_code": ine_code,
+                                                              "province":concejal[0],
+                                                              "ine_code": concejal[0],
                                                               "nombre": concejal[0],
                                                               "apellidos": concejal[1],
                                                               "partido": concejal[3],
@@ -20,8 +20,8 @@ def save2database(province, ine_code, concejales):
             })
         else:
             scraperwiki.sqlite.save(unique_keys=["id"], data={"id":id,
-                                                              "prov":province,
-                                                              "ine_code": ine_code,
+                                                              "province":concejal[0],
+                                                              "ine_code": concejal[0],
                                                               "nombre": concejal[0],
                                                               "apellidos": concejal[1],
                                                               "partido": concejal[2],
@@ -44,7 +44,7 @@ def getAllMunicipalitiesFromSoup(soup):
     return municipalities
 
 
-def soup2Concejales(soup):
+def soup2Concejales(province, ine_code, soup):
     concejales = []
     for tr in soup.find_all('tr'):
         concejal = []
@@ -52,6 +52,8 @@ def soup2Concejales(soup):
             concejal.append(td.get_text())
             #print td.get_text()
         if concejal:
+            concejal.append(province)
+            concejal.append(ine_code)
             concejales.append(concejal)
         #print "================"
 
@@ -109,9 +111,12 @@ def using_requests_1(province):
         cookie = response.headers['set-cookie']
         soup = BeautifulSoup(response.text)
         municipalities = getAllMunicipalitiesFromSoup(soup)
+        all_concejales = []
         for mun in municipalities:
-            using_requests_2(province, mun[0], cookie)
+            concejales = using_requests_2(province, mun[0], cookie)
+            all_concejales.append(concejales)
 
+        return all_concejales
 
 def using_requests_2(province, ine_code, cookie):
     url = 'https://ssweb.seap.minhap.es/portalEELL/consulta_alcaldes'
@@ -128,16 +133,19 @@ def using_requests_2(province, ine_code, cookie):
                              params=body,
                              verify=False)
     soup = BeautifulSoup(response.text)
-    concejales = soup2Concejales(soup)
-    save2database(province, ine_code, concejales)
-
+    concejales = soup2Concejales(province, ine_code, soup)
+    return concejales
 #lib URLLIB2
 #for province in range(2):
 #    response = using_urllib_1(province)
 
 #lib REQUESTS
-for province in range(4):
+for province in range(1, 2):
     print province, " ===================== "
-    response = using_requests_1(province)
+    all_concejales = using_requests_1(province)
+
+print all_concejales
+save2database(all_concejales)
+
 
 print "Finished"
