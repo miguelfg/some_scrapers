@@ -15,10 +15,23 @@ soup = BeautifulSoup(html.content)
 # print soup.get_text()
 # print soup.find_all('div', 'zone_info_mep')
 
-print soup.findAll('div', 'zone_info_mep')
-for link in soup.findAll('a'):
-    if not str(link.get('href')).startswith('javascript'):
-        print(link.get('href'))
+#print soup.findAll('div', 'zone_info_mep')
+#for link in soup.findAll('a'):
+#    if not str(link.get('href')).startswith('javascript'):
+#        print(link.get('href'))
+
+########################################
+print soup.a
+print soup.p
+print soup.find_all('p')
+print soup.find_all('a')
+print soup.find(id="link3")
+print soup.prettify()
+print soup.find_all('div', 'zone_info_mep')
+for link in soup.find_all('a'):
+     print(link.get('href'))
+# print(soup.get_text())
+
 
 
 
