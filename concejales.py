@@ -12,20 +12,20 @@ def save2database(concejales):
         if concejal[2] == 'Alcalde':
             scraperwiki.sqlite.save(unique_keys=["id"], data={"id":id,
                                                               "province":concejal[0],
-                                                              "ine_code": concejal[0],
-                                                              "nombre": concejal[0],
-                                                              "apellidos": concejal[1],
-                                                              "partido": concejal[3],
-                                                              "cargo": concejal[2],
+                                                              "ine_code": concejal[1],
+                                                              "nombre": concejal[2],
+                                                              "apellidos": concejal[3],
+                                                              "partido": concejal[5],
+                                                              "cargo": concejal[4],
             })
         else:
             scraperwiki.sqlite.save(unique_keys=["id"], data={"id":id,
                                                               "province":concejal[0],
-                                                              "ine_code": concejal[0],
-                                                              "nombre": concejal[0],
-                                                              "apellidos": concejal[1],
-                                                              "partido": concejal[2],
-                                                              "cargo": concejal[3],
+                                                              "ine_code": concejal[1],
+                                                              "nombre": concejal[2],
+                                                              "apellidos": concejal[3],
+                                                              "partido": concejal[4],
+                                                              "cargo": concejal[5],
             })
 
         id +=1
@@ -109,12 +109,12 @@ def using_requests_1(province):
         cookie = response.headers['set-cookie']
         soup = BeautifulSoup(response.text)
         municipalities = getAllMunicipalitiesFromSoup(soup)
-        all_concejales = []
+        concejales_provincia = []
         for mun in municipalities:
-            concejales = using_requests_2(province, mun[0], cookie)
-            all_concejales.append(concejales)
+            concejales_municipio = using_requests_2(province, mun[0], cookie)
+            concejales_provincia = concejales_provincia + concejales_municipio
 
-        return all_concejales
+        return concejales_provincia
 
 def using_requests_2(province, ine_code, cookie):
     url = 'https://ssweb.seap.minhap.es/portalEELL/consulta_alcaldes'
@@ -131,23 +131,20 @@ def using_requests_2(province, ine_code, cookie):
                              params=body,
                              verify=False)
     soup = BeautifulSoup(response.text)
-    concejales = soup2Concejales(province, ine_code, soup)
-    return concejales
+    concejales_municipio = soup2Concejales(province, ine_code, soup)
+    return concejales_municipio
+
 #lib URLLIB2
 #for province in range(2):
 #    response = using_urllib_1(province)
 
 #lib REQUESTS
-for province in range(1, 2):
+all_concejales = []
+for province in range(1, 3):
     print province, " ===================== "
-    all_concejales = using_requests_1(province)
-
-print all_concejales
-print len(all_concejales)
-print all_concejales[0]
-print len(all_concejales[0])
-print all_concejales[0][0]
-print len(all_concejales[0][0])
+    concejales_provinciales = using_requests_1(province)
+    all_concejales = all_concejales + concejales_provinciales
+    print len(all_concejales)
 #save2database(all_concejales)
 
 
