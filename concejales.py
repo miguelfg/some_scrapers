@@ -52,9 +52,7 @@ def soup2Concejales(province, ine_code, soup):
             concejal.append(td.get_text())
             #print td.get_text()
         if concejal:
-            concejal.append(province)
-            concejal.append(ine_code)
-            concejales.append(concejal)
+            concejales.append([province, ine_code] + concejal)
         #print "================"
 
     return concejales
@@ -145,7 +143,12 @@ for province in range(1, 2):
     all_concejales = using_requests_1(province)
 
 print all_concejales
-save2database(all_concejales)
+print len(all_concejales)
+print all_concejales[0]
+print len(all_concejales[0])
+print all_concejales[0][0]
+print len(all_concejales[0][0])
+#save2database(all_concejales)
 
 
 print "Finished"
