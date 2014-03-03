@@ -4,13 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/forges.py" line="29" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e865c71d-4070-4f78-a00a-28f2fca28974" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/concejales_BACKUP.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/europarlament.py" />
+    <list default="true" id="e865c71d-4070-4f78-a00a-28f2fca28974" name="Default" comment="with comments">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concejales.py" afterPath="$PROJECT_DIR$/concejales.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forges.py" afterPath="$PROJECT_DIR$/forges.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scraping_medialab.iml" afterPath="$PROJECT_DIR$/.idea/scraping_medialab.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scraping_medialab.iws" />
@@ -53,7 +48,7 @@
       <file leaf-file-name="concejales.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concejales.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="24" selection-start="0" selection-end="6066" vertical-scroll-proportion="0.7624224" vertical-offset="2093" max-vertical-offset="2737">
+            <state line="147" column="14" selection-start="5904" selection-end="5904" vertical-scroll-proportion="0.47204968" vertical-offset="2195" max-vertical-offset="2907">
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -413,13 +408,18 @@
       <created>1393748047700</created>
       <updated>1393748047700</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="with comments">
+      <created>1393847086953</created>
+      <updated>1393847086953</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1088" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -436,7 +436,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -457,7 +456,8 @@
     <MESSAGE value="using requests, fails second step" />
     <MESSAGE value="concejales OK" />
     <MESSAGE value="need to concatenate concejal list with prov and inecode" />
-    <option name="LAST_COMMIT_MESSAGE" value="need to concatenate concejal list with prov and inecode" />
+    <MESSAGE value="with comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="with comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -630,7 +630,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concejales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="24" selection-start="0" selection-end="6066" vertical-scroll-proportion="0.7624224" vertical-offset="2093" max-vertical-offset="2737">
+        <state line="147" column="14" selection-start="5904" selection-end="5904" vertical-scroll-proportion="0.47204968" vertical-offset="2195" max-vertical-offset="2907">
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

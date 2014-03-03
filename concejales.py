@@ -3,7 +3,10 @@ import csv
 import scraperwiki
 from bs4 import BeautifulSoup
 
-
+# FUNCION QUE:
+# RECIBE: LISTADO DE CONCEJALES DENTRO DEL SOUP
+# GUARDA EL LISTADO EN UN FICHERO .CSV
+# NO DEVUELVE NADA
 def save2csv(concejales):
     fOUTPUT = "all_concejales.csv"
     oFile = open(fOUTPUT, "wb")
@@ -18,6 +21,10 @@ def save2csv(concejales):
     print "csv generated:" + fOUTPUT
 
 
+# FUNCION QUE:
+# RECIBE: LISTADO DE CONCEJALES DENTRO DEL SOUP
+# GUARDA EL LISTADO EN LA BASE DE DATOS
+# NO DEVUELVE NADA
 def save2database(concejales):
     id = 1
     for concejal in concejales[:6]:
@@ -43,8 +50,9 @@ def save2database(concejales):
         id +=1
 
 
-# RECIBIMOS HTML - SOUP
-# DEVOLVEMOS LISTADO DE CODIGOS DE MUNICIPIO
+# FUNCION QUE:
+# RECIBE: HTML - SOUP
+# DEVUELVE: LISTADO DE CODIGOS DE MUNICIPIO
 def getAllMunicipalitiesFromSoup(soup):
     # FILTRAMOS POR ETIQUETA 'OPTION'
     options = soup.find_all('option')
@@ -64,8 +72,9 @@ def getAllMunicipalitiesFromSoup(soup):
     return municipalities
 
 
-# RECIBIMOS HTML - SOUP
-# DEVOLVEMOS LISTADO DE CONCEJALES DENTRO DEL SOUP
+# FUNCION QUE:
+# RECIBE: HTML - SOUP
+# DEVUELVE: LISTADO DE CONCEJALES DENTRO DEL SOUP
 def soup2Concejales(province, ine_code, soup):
     concejales = []
     # SELECCIONAMOS LAS FILAS DE LA TABLA E ITERAMOS
@@ -136,6 +145,7 @@ def using_requests_2(province, ine_code, cookie):
 
 
 # MAIN
+# AQUI EMPIEZA
 all_concejales = []
 # for province in range(1, 3):
 # BUCLE QUE RECORRE EL NUMERO DE PROVINCIAS
