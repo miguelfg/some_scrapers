@@ -1,7 +1,7 @@
 *.pyc
 custom_settings.py
 custom_wsgi.py
-.idea/
+.idea/*.xml
 migrations/
 
 # Compiled source #
