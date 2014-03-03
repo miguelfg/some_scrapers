@@ -147,9 +147,8 @@ def using_requests_2(province, ine_code, cookie):
 # MAIN
 # AQUI EMPIEZA
 all_concejales = []
-# for province in range(1, 3):
 # BUCLE QUE RECORRE EL NUMERO DE PROVINCIAS
-for province in range(1, 51):
+for province in range(1, 2):
     # VISITAMOS LA PRIMERA WEB
     concejales_provinciales = using_requests_1(province)
 
@@ -160,7 +159,7 @@ for province in range(1, 51):
 
 # save all data
 #save2database(all_concejales)
-save2csv(all_concejales)
+# save2csv(all_concejales)
 
 
 print "Finished"
