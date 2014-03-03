@@ -1,37 +1,40 @@
 __author__ = 'MiguelFG'
 import requests
-# from bs4 import BeautifulSoup
-from BeautifulSoup import BeautifulSoup
-url = 'http://elpais.com/autor/antonio_fraguas_forges/a/'
+from bs4 import BeautifulSoup
+url = 'http://www.flourish.org/blog'
 html = requests.get(url)
-soup = BeautifulSoup(html.content)
-########################################
-# soup.a
-# soup.p
-# soup.find_all('p')
-# soup.find_all('a')
-# soup.find(id="link3")
-# soup.prettify()
+soup = BeautifulSoup(html.text)
+
+# ALL HTML
+print soup
+# print soup.prettify()
 # print soup.get_text()
-# print soup.find_all('div', 'zone_info_mep')
 
-#print soup.findAll('div', 'zone_info_mep')
-#for link in soup.findAll('a'):
-#    if not str(link.get('href')).startswith('javascript'):
-#        print(link.get('href'))
+# PRIMEROS FILTROS: LINKS, PARRAFOS
+# print soup.a
+# print soup.p
+# print soup.find_all('p')
+# print soup.find_all('a')
 
-########################################
-print soup.a
-print soup.p
-print soup.find_all('p')
-print soup.find_all('a')
-print soup.find(id="link3")
-print soup.prettify()
-print soup.find_all('div', 'zone_info_mep')
-for link in soup.find_all('a'):
-     print(link.get('href'))
-# print(soup.get_text())
+# RECORREMOS EL LISTADO DE LINKS E IMPRIMIMOS UNO A UNO
+# for link in soup.find_all('a'):
+#     print link
 
 
+# FILTRAMOS POR ETIQUETA Y POR VALOR DEL ATRIBUTO CLASS
+# print soup.find_all('div', 'entry-date')
+
+# RECORREMOS EL LISTADO DE ELEMENTOS
+# for date in soup.find_all('div', 'entry-date'):
+    # print date
+    # print date.prettify()
+    # print date.get_text()
 
 
+# RECORREMOS EL LISTADO DE TODOS LOS LINKS EN EL HTML
+#  print soup.findAll('a')
+# for link in soup.findAll('a'):
+    # NOS QUEDAMOS CON EN EL VALOR DEL LINK, http://...
+#    print(link.get('href'))
+   # if not str(link.get('href')).startswith('javascript'):
+   #     print(link.get('href'))
